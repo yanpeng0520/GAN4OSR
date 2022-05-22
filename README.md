@@ -3,12 +3,12 @@ Overview of the whole model architecture is shown below. The whole model consist
 	The generative model has three components: encoder $G_{enc}$ , decoder $G_{dec}$ , discriminator $D$ (including a closed-set classifier $C_{cs}$ and an activation function $A$).
 	Assume we have image pairs (${x_1},{x_2}$) from class "0" and class "5".  From encoder-decoder generative model, reconstructed images from 2 classes and unknown images are generated. Then, $C_{os}$ is trained on the known image samples and generated unknown image samples.
   
-<img src="https://github.com/yanpeng0520/wtf/blob/main/test/arch_0513.png" width=80% height=80%>
+<img src="https://github.com/yanpeng0520/GAN4OSR/blob/main/pics/architecture.png" width=80% height=80%>
 
 # Generated samples from MNIST
 The figures illustrates two different OSR scenarios. The subfigures on top display two sets of images (separated by a white dash line), which include the original images from one class (1st row), original images from another class (3rd row) and generated images from two different classes (2nd row). The scatter plots in the bottom displays the feature representations of original digit images and generated images using LeNet++. Colored dots represent known samples and different color represents different classes. The black dots represent generated unknown samples. 
 
-<img src="https://github.com/yanpeng0520/wtf/blob/main/test/g.png" width=80% height=80%>
+<img src="https://github.com/yanpeng0520/GAN4OSR/blob/main/pics/generated_samples.png" width=80% height=80%>
 
 # Requirements
 - Python 3
