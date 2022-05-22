@@ -1,7 +1,7 @@
 # Combined-GAN for OSR
 
-
-
+![Alt text](./test/t.png?raw=true "Title")
+![Alt text](./test/t.png?raw=true "Title")
 
 # Requirements
 - Python 3
