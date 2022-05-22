@@ -6,7 +6,7 @@ Overview of the whole model architecture is shown below. The whole model consist
 <img src="https://github.com/yanpeng0520/wtf/blob/main/test/arch_0513.png" width=80% height=80%>
 
 # Generated samples from MNIST
-The figure illustrates two different OSR scenarios. The figures on top display two sets of images (separated by a white dash line), which include the original images from one class (1st row), original images from another class (3rd row) and generated images from two different classes (2nd row). The scatter plots in the bottom displays the feature representations of original digit images and generated images using LeNet++. Colored dots represent known samples and different color represents different classes. The black dots represent generated unknown samples. 
+The figures illustrates two different OSR scenarios. The subfigures on top display two sets of images (separated by a white dash line), which include the original images from one class (1st row), original images from another class (3rd row) and generated images from two different classes (2nd row). The scatter plots in the bottom displays the feature representations of original digit images and generated images using LeNet++. Colored dots represent known samples and different color represents different classes. The black dots represent generated unknown samples. 
 
 <img src="https://github.com/yanpeng0520/wtf/blob/main/test/g.png" width=80% height=80%>
 
@@ -42,3 +42,13 @@ To train and test on MNIST(KK)+ a subset of EMNIST letters (A-M)(KU).
 ```
 bash excute.sh
 ```
+To generate samples from MNIST and show deep feature visualization using LeNet++. Trained models can be found in model/trained_model.
+```
+python3 --workers 0 --batchSize 64 --dataset 'mnist' --manualSeed 2 evaluate_sample.py
+```
+To generate samples from CIFAR-10 and show deep feature visualization using ResNet-18++. Trained models can be found in model/trained_model.
+```
+python3 --workers 0 --batchSize 64 --dataset 'cifar10' --manualSeed 2 evaluate_sample.py
+```
+
+
