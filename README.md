@@ -1,6 +1,6 @@
 # Combined-GAN for OSR
 Overview of the whole model architecture is shown below. The whole model consists of two models: Combined-GAN model (on the top) and open-set model (in the bottom). 
-	The generative model has three components: encoder $G_{enc}$ , decoder $G_{dec}$ , discriminator $D$ (including a closed-set classifier $C_{cs}$ and an activation function $A$).
+	The generative model has three components: encoder $G_{enc}$ , decoder $G_{dec}$ , discriminator $D$ (including a classifier $C_{cs}$ and an activation function $A$).
 	Assume we have image pairs (${x_1},{x_2}$) from class "0" and class "5".  From encoder-decoder generative model, reconstructed images from 2 classes and unknown images are generated. Then, $C_{os}$ is trained on the known image samples and generated unknown image samples.
   
 <img src="https://github.com/yanpeng0520/GAN4OSR/blob/main/pics/architecture.png" width=80% height=80%>
@@ -31,7 +31,7 @@ The figures illustrates two different OSR scenarios. The subfigures on top displ
 - Accuancy
 - Confidence
 - AUC
-- OSRC curve
+- OSRC results (OSCR curve and AUOC)
 
 # Dataset
 We use 7 benchmark datasets obtained from PyTorch : MNIST, EMNIST, KMNIST, FMNIST, SVHN, CIFAR-10, CIFAR-100.
